@@ -22,7 +22,7 @@ The program utilizes the framework of [Pytorch-Unet](https://github.com/milesial
 
 Using default dataset and parameters:
 
-For a single model, the dice score can reach 95% on training set and 77% on validation set.
+For a single model (Unet architecture + inceptionv4 backbone for example), the dice score can reach 95% on training set and 77% on validation set.
 
 For an ensemble model, the dice score can reach 95% on training set and 80% on validation set.
 
