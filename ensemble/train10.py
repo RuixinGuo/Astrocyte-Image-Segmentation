@@ -16,7 +16,7 @@ import random
 from tqdm import tqdm
 from pathlib import Path
 from data_loading import BasicDataset
-from evaluate import evaluate
+from evaluate1 import evaluate
 from dice_score import dice_loss
 
 #def train_val_dataset(dataset, val_split=0.25):

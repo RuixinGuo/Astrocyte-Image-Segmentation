@@ -5,7 +5,7 @@ from tqdm import tqdm
 from dice_score import multiclass_dice_coeff, dice_coeff
 
 
-def evaluate(net, dataloader, device):
+def evaluate(net, dataloader):
     net.eval()
     num_val_batches = len(dataloader)
     dice_score = 0
@@ -14,8 +14,8 @@ def evaluate(net, dataloader, device):
     for batch in tqdm(dataloader, total=num_val_batches, desc='Validation round', unit='batch', leave=False):
         image, mask_true = batch['image'], batch['mask']
         # move images and labels to correct device and type
-        image = image.to(device=device, dtype=torch.float32)
-        mask_true = mask_true.to(device=device, dtype=torch.long)
+#        image = image.to(device=device, dtype=torch.float32)
+        mask_true = mask_true.to(device="cpu", dtype=torch.long)
         mask_true = F.one_hot(mask_true, num_classes = 2).permute(0, 3, 1, 2).float()
 
         with torch.no_grad():
