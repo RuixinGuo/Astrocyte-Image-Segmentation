@@ -12,7 +12,7 @@ The dataset is packed in the dataset.zip file, including two sets **data1** and 
 
 ## Program
 
-The program utilizes the framework of [Pytorch-Unet](https://github.com/milesial/Pytorch-UNet) but replaces the Unet model with various pretrained segmentation model from [SMP](https://smp.readthedocs.io/en/latest/index.html).
+The program utilizes the framework of [Pytorch-Unet](https://github.com/milesial/Pytorch-UNet) but replaces the Unet model with various pretrained segmentation models from [SMP](https://smp.readthedocs.io/en/latest/index.html).
 
 + **train**: Train a single model. Transfer learning is available.
 
